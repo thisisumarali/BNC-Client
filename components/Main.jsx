@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
+import H1 from "./H1";
 
 const Main = () => {
   return (
@@ -14,9 +15,9 @@ const Main = () => {
           priority
         />
       </div>
-      <h1 className="text-5xl  font-mono text-primary text-center py-6 pt-16 uppercase">
-        Quality Products <br /> Trusted by Thousands
-      </h1>
+      <H1>
+        Quality Products <br /> Trusted by Thousands.
+      </H1>
       <div className="flex justify-center py-6 items-center">
         <div className="relative w-1/3 h-[45vh] bg-primary/10 text-center p-6 px-16">
           <h1 className="text-4xl uppercase pb-2">A Taste Of Real Goodness</h1>
@@ -42,6 +43,12 @@ const Main = () => {
             priority
           />
         </div>
+      </div>
+      <H1>Categories</H1>
+      <div className="flex justify-between py-6">
+        <span className="w-1/4 h-[60vh] outline-black outline">
+          {/* <Image alt="image" src={}/> */}
+        </span>
       </div>
     </main>
   );

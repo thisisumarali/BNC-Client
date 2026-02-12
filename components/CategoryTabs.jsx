@@ -32,7 +32,11 @@ export default function CategoryTabs() {
               onClick={() => setActive(item)}
               className={`
                 relative px-12 lg:px-16 py-3 transition
-                ${isActive ? "bg-white text-primary rounded-br-full  -my-3 shadow-lg" : ""}
+                ${
+                  isActive
+                    ? "bg-white text-primary rounded-br-full  -my-3 shadow-lg"
+                    : ""
+                }
               `}
             >
               {item}

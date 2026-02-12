@@ -3,6 +3,8 @@ import Link from "next/link";
 import Button from "./Button";
 import H1 from "./H1";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import CategoryTabs from "./CategoryTabs";
+import CategoryMain from "./CategoryMain";
 
 const Main = () => {
   return (
@@ -51,7 +53,7 @@ const Main = () => {
         </div>
       </section>
       <section className="pt-16">
-        <div className="grid grid-cols-3 items-center px-6 pt-16">
+        <div className="grid grid-cols-3 items-center px-6 py-5">
           <div></div>
           <h1 className="text-primary text-5xl font-mono text-center uppercase">
             Explore Collection
@@ -71,7 +73,7 @@ const Main = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 px-6 pt-6 uppercase">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 px-2 pt-6 uppercase">
           {[
             {
               title: "Dry Fruits",
@@ -121,7 +123,7 @@ const Main = () => {
           <div className="group relative w-[75vw] h-[30vh] outline overflow-hidden shadow-2xl">
             <Image
               alt="Cranberry"
-              src="/images/cranberry.jpg"
+              src="/images/gift-basket.png"
               fill
               className="object-cover"
             />
@@ -225,7 +227,15 @@ const Main = () => {
           </div>
         </div>
       </section>
-      3
+      <section className="py-8">
+        <H1>Where Does It Come From?</H1>
+        <p className="text-center font-sans ">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quo
+          corrupti iure obcaecati optio numquam <br />
+          quos! sit amet consectetur adipisicing elit. Dolor quo
+        </p>
+        <CategoryMain />
+      </section>
     </main>
   );
 };

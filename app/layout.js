@@ -1,6 +1,8 @@
 import { Poppins, Fraunces } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const bodoni = Fraunces({
   subsets: ["latin"],

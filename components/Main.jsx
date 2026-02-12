@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
 import H1 from "./H1";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 const Main = () => {
   return (
@@ -35,7 +36,7 @@ const Main = () => {
               different candies.
             </p>
             <Link href="/">
-              <Button className="px-6 py-3">Shop Now</Button>
+              <Button className="px-6 py-3 ">Shop Now</Button>
             </Link>
           </div>
           <div className="relative w-1/3 h-[50vh]">
@@ -50,106 +51,66 @@ const Main = () => {
         </div>
       </section>
       <section className="pt-16">
-        <H1 className="text-primary">Explore BCN Collection</H1>
-        <div className="flex justify-between pt-6">
-          <Link
-            href="/"
-            className="group relative w-1/4 h-[60vh] outline-white outline shadow-2xl overflow-hidden"
-          >
-            <Image
-              alt="Figs"
-              src="/images/Figs.jpg"
-              fill
-              className="object-cover"
-            />
+        <div className="grid grid-cols-3 items-center px-6 pt-16">
+          <div></div>
+          <h1 className="text-primary text-5xl font-mono text-center uppercase">
+            Explore Collection
+          </h1>
 
-            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
+          <div className="flex justify-end">
+            <Link
+              href="/categories"
+              className="text-primary flex uppercase gap-2 items-center group"
+            >
+              All Categories
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                <HiOutlineArrowNarrowRight />
+              </span>
+            </Link>
+          </div>
+        </div>
 
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h2 className="text-white text-2xl font-semibold tracking-wide  opacity-0 -translate-y-6  group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                Dry Fruits
-              </h2>
-            </div>
-          </Link>
-          <Link
-            href="/"
-            className="group relative w-1/4 h-[60vh] outline-white outline shadow-2xl overflow-hidden"
-          >
-            <Image
-              alt="Figs"
-              src="/images/cranberry.jpg"
-              fill
-              className="object-cover"
-            />
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 px-6 pt-6 uppercase">
+          {[
+            {
+              title: "Dry Fruits",
+              img: "/images/Figs.jpg",
+              link: "/dry-fruits",
+            },
+            { title: "Dried Fruits", img: "/images/cranberry.jpg", link: "/" },
+            { title: "Dates", img: "/images/Ajwa.jpg", link: "/" },
+            {
+              title: "Specialities",
+              img: "/images/SpecialAlmonds.jpg",
+              link: "/",
+            },
+            { title: "Rice Crackers", img: "/images/chickpeas.jpg", link: "/" },
+          ].map((item, index) => (
+            <Link
+              key={index}
+              href={item.link}
+              className="group relative h-[60vh] shadow-2xl overflow-hidden"
+            >
+              <Image
+                alt={item.title}
+                src={item.img}
+                fill
+                className="object-cover"
+              />
 
-            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
 
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h2 className="text-white text-2xl font-semibold tracking-wide  opacity-0 -translate-y-6  group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                Dried Fruits
-              </h2>
-            </div>
-          </Link>
-          <Link
-            href="/"
-            className="group relative w-1/4 h-[60vh] outline-white outline shadow-2xl overflow-hidden"
-          >
-            <Image
-              alt="Figs"
-              src="/images/Ajwa.jpg"
-              fill
-              className="object-cover"
-            />
-
-            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
-
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h2 className="text-white text-2xl font-semibold tracking-wide  opacity-0 -translate-y-6  group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                Dates
-              </h2>
-            </div>
-          </Link>
-          <Link
-            href="/"
-            className="group relative w-1/4 h-[60vh] outline-white outline shadow-2xl overflow-hidden"
-          >
-            <Image
-              alt="Figs"
-              src="/images/SpecialAlmonds.jpg"
-              fill
-              className="object-cover"
-            />
-
-            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
-
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h2 className="text-white text-2xl font-semibold tracking-wide  opacity-0 -translate-y-6  group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                Specialites
-              </h2>
-            </div>
-          </Link>
-          <Link
-            href="/"
-            className="group relative w-1/4 h-[60vh] outline-white outline shadow-2xl overflow-hidden"
-          >
-            <Image
-              alt="Figs"
-              src="/images/chickpeas.jpg"
-              fill
-              className="object-cover"
-            />
-
-            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
-
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h2 className="text-white text-2xl font-semibold tracking-wide  opacity-0 -translate-y-6  group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                Rice Crackers
-              </h2>
-            </div>
-          </Link>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <h2 className="text-white text-2xl font-semibold tracking-wide opacity-0 -translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                  {item.title}
+                </h2>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
-      <section className="w-full min-h-[90vh] bg-primary/50 py-10">
+      <section className="w-full min-h-[90vh] bg-primary/90 py-10">
         <H1 className="text-white text-center pb-10">
           Chocolates & Nuts, Perfectly Gifted
         </H1>
@@ -157,7 +118,7 @@ const Main = () => {
         {/* Main Wrapper Center */}
         <div className="flex flex-col items-center gap-8">
           {/* Top Wide Banner */}
-          <div className="group relative w-[75vw] h-[25vh] outline overflow-hidden shadow-2xl">
+          <div className="group relative w-[75vw] h-[30vh] outline overflow-hidden shadow-2xl">
             <Image
               alt="Cranberry"
               src="/images/cranberry.jpg"
@@ -179,8 +140,8 @@ const Main = () => {
 
               <Link
                 href="/"
-                className="px-6 py-3 lg:px-8 lg:py-4 outline outline-2 outline-white
-          hover:bg-white hover:text-primary font-medium text-white transition"
+                className="px-6 py-3 lg:px-8 lg:py-4  outline-2 outline-white
+          hover:bg-white hover:text-primary font-medium text-white transition hover:uppercase "
               >
                 Create Basket
               </Link>
@@ -190,56 +151,77 @@ const Main = () => {
           {/* 👇 These two cards will be directly UNDER the banner */}
           <div className="flex gap-6 w-[75vw]">
             {/* Left Card */}
-            <Link
-              href="/"
-              className="group relative w-1/2 h-[40vh]  shadow-2xl overflow-hidden"
-            >
+            <div className="group relative w-1/2 h-[40vh]   shadow-2xl overflow-hidden">
               <Image
                 alt="Rice Crackers"
-                src="/images/chickpeas.jpg"
+                src="/images/gift-basket.png"
                 fill
                 className="object-cover"
               />
 
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-300" />
 
-              <div className="absolute inset-0 flex items-center justify-center">
-                <h2
-                  className="text-white text-3xl font-semibold tracking-wide
-            opacity-0 -translate-y-6
-            group-hover:opacity-100 group-hover:translate-y-0
-            transition-all duration-500"
-                >
-                  Rice Crackers
-                </h2>
-              </div>
-            </Link>
+              <div className="absolute inset-0 flex items-end justify-around px-6 py-12">
+                <div>
+                  <h2
+                    className="text-white text-2xl lg:text-3xl font-semibold tracking-wide  
+     
+          opacity-100 translate-y-0
+          transition-all duration-500"
+                  >
+                    Ready Made Gift Baskets
+                  </h2>
+                  <p className="text-white">
+                    Ready-made gift baskets <br /> filled with premium treats
+                    for every occasion.
+                  </p>
+                </div>
 
-            {/* Right Card */}
-            <Link
-              href="/"
-              className="group relative w-1/2 h-[40vh]  shadow-2xl overflow-hidden"
-            >
+                <Link
+                  href="/"
+                  className="px-4 py-2 lg:px-6 lg:py-3  outline-2 outline-white
+          hover:bg-white hover:text-primary font-medium text-white transition hover:uppercase "
+                >
+                  Buy Basket
+                </Link>
+              </div>
+            </div>
+
+            <div className="group relative w-1/2 h-[40vh]  shadow-2xl overflow-hidden">
               <Image
                 alt="Figs"
-                src="/images/Figs.jpg"
+                src="/images/empty-basket.jpg"
                 fill
                 className="object-cover"
               />
 
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-300" />
 
-              <div className="absolute inset-0 flex items-center justify-center">
-                <h2
-                  className="text-white text-3xl font-semibold tracking-wide
-            opacity-0 -translate-y-6
-            group-hover:opacity-100 group-hover:translate-y-0
-            transition-all duration-500"
+              <div className="absolute inset-0 flex items-end justify-around px-6 py-12">
+                <div>
+                  <h2
+                    className="text-white text-2xl lg:text-3xl font-semibold tracking-wide
+     
+          opacity-100 translate-y-0
+          transition-all duration-500"
+                  >
+                    Empty Baskets
+                  </h2>
+                  <p className="text-white">
+                    Simple and elegant empty baskets <br /> ready to use for any
+                    event or celebration.
+                  </p>
+                </div>
+
+                <Link
+                  href="/"
+                  className="px-4 py-2 lg:px-6 lg:py-3  outline-2 outline-white
+          hover:bg-white hover:text-primary font-medium text-white transition hover:uppercase"
                 >
-                  FIGS
-                </h2>
+                  Buy Basket
+                </Link>
               </div>
-            </Link>
+            </div>
           </div>
         </div>
       </section>

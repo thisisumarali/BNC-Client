@@ -28,20 +28,19 @@ const HomeCarousel = () => {
     infinite: true,
     autoplay: true,
     speed: 600,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
   };
 
   return (
-    <section className="px-24 py-6">
-      <div className="rounded-3xl overflow-hidden">
+    <section className="w-full h-screen flex items-center justify-center px-6 md:px-24 py-6">
+      <div className="w-full max-w-500 rounded-3xl overflow-hidden">
         <Slider {...settings}>
           {items.map((item, index) => (
-            <div key={index}>
-              {/* FLEX PARENT */}
-              <div className="relative  h-screen flex items-end">
+            <div key={index} className="flex justify-center items-center">
+              <div className="relative w-full h-[80vh] flex items-end">
                 {/* Background Image */}
                 <Image
                   src={item.img}
@@ -54,19 +53,10 @@ const HomeCarousel = () => {
                 {/* Dark Overlay */}
                 <div className="absolute inset-0 bg-black/10" />
 
-                {/* Bottom Content Wrapper */}
-                {/* Bottom Content Wrapper */}
-                <div className="relative w-full px-16 pb-12 z-10">
-                  <div
-                    className="bg-white/20 backdrop-blur-xl
-               border border-white/30
-               rounded-2xl
-               px-10
-               h-[22vh]
-               flex items-center justify-between
-               text-white shadow-xl"
-                  >
-                    {/* LEFT SIDE */}
+                {/* Bottom Content */}
+                <div className="relative w-full px-6 md:px-16 pb-12 z-10">
+                  <div className="bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl px-10 h-[22vh] flex items-center justify-between text-white shadow-xl">
+                    {/* Left */}
                     <div className="max-w-xl">
                       <h2 className="text-5xl font-semibold py-2">
                         {item.title}
@@ -78,7 +68,7 @@ const HomeCarousel = () => {
                       </p>
                     </div>
 
-                    {/* RIGHT SIDE */}
+                    {/* Right */}
                     <button className="bg-transparent border-white border-2 text-white px-12 py-4 rounded-3xl text-sm font-medium hover:bg-primary transition">
                       Shop Now →
                     </button>

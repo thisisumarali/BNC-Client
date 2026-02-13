@@ -34,7 +34,7 @@ const BasketSection = () => {
             </h2>
 
             <Link
-              href="/"
+              href="/create-basket"
               className="px-6 py-3 lg:px-8 lg:py-4 outline-2 outline-white
               hover:bg-white hover:text-primary font-medium text-white transition hover:uppercase"
             >
@@ -68,7 +68,7 @@ const BasketSection = () => {
               </div>
 
               <Link
-                href="/"
+                href="/ready-basket"
                 className="px-4 py-2 lg:px-6 lg:py-3 outline-2 outline-white
                 hover:bg-white hover:text-primary font-medium text-white transition hover:uppercase"
               >
@@ -100,7 +100,7 @@ const BasketSection = () => {
               </div>
 
               <Link
-                href="/"
+                href="/simple-basket"
                 className="px-4 py-2 lg:px-6 lg:py-3 outline-2 outline-white
                 hover:bg-white hover:text-primary font-medium text-white transition hover:uppercase"
               >

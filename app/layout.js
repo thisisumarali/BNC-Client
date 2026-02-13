@@ -28,7 +28,9 @@ export default function RootLayout({ children }) {
       <body
         className={` ${poppins.variable} ${bodoni.variable} font-sans antialiased`}
       >
-        <Header />
+        <div className="hidden lg:block">
+          <Header />
+        </div>
         {children}
       </body>
     </html>

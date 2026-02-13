@@ -9,7 +9,7 @@ const CorporateImage = () => {
     <section className="w-full py-16">
       <div className="mx-auto max-w-7xl px-4">
         {/* Main Wrapper */}
-        <div className="relative overflow-hidden rounded-3xl border border-primary/20 bg-[#fbf7f2] shadow-sm">
+        <div className="relative overflow-hidden rounded-xl border border-primary/20 bg-[#fbf7f2] shadow-sm">
           {/* Soft background glow */}
           <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-transparent" />
 

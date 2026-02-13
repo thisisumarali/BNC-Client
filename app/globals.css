@@ -117,3 +117,25 @@
   scrollbar-width: thin;
   scrollbar-color: var(--primary) #0b0b0b;
 }
+
+.slick-prev,
+.slick-next {
+  z-index: 10;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 28px;
+  color: white;
+}
+
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 40px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}

@@ -20,6 +20,7 @@ export const metadata = {
     "BOMBAY CHOC N NUTS | Online Dry Fruits, Dates Ands Imported Chochlates in Pakistan.",
   description:
     "Bombay Choc N Nuts | Online Dry Fruits, Dates Ands Imported Chochlates in Pakistan.",
+  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({ children }) {

@@ -4,8 +4,8 @@ import CategoryTabs from "./CategoryTabs";
 
 const Card = ({ title }) => {
   return (
-    <div className="relative w-full rounded-2xl overflow-hidden shadow-lg bg-white">
-      <div className="relative h-72 sm:h-96 lg:h-112 w-full">
+    <div className="relative w-80 rounded-2xl overflow-hidden shadow-lg bg-white">
+      <div className="relative h-96 lg:h-112 w-full">
         <Image
           src="/images/Figs.jpg"
           alt={title}
@@ -29,7 +29,6 @@ const Card = ({ title }) => {
   );
 };
 
-
 const CategoryMain = () => {
   const data = [
     "Dry Fruits",
@@ -46,14 +45,13 @@ const CategoryMain = () => {
     <section>
       <CategoryTabs />
 
-    <div className="py-4 px-4">
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-    {data.map((item, i) => (
-      <Card key={i} title={item} />
-    ))}
-  </div>
-</div>
-
+      <div className="py-4 px-4 flex justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          {data.map((item, i) => (
+            <Card key={i} title={item} />
+          ))}
+        </div>
+      </div>
     </section>
   );
 };

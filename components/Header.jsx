@@ -25,7 +25,7 @@ const Header = () => {
     <header>
       <Topheader />
       <div className="flex items-center justify-around py-2">
-        <span  className="text-xl text-primary">
+        <span className="text-xl text-primary">
           <FaMagnifyingGlass />
         </span>
         <Link href="/">

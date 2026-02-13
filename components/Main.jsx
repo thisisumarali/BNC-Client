@@ -3,17 +3,17 @@ import TopMain from "./Home/TopMain";
 import ExploreCollection from "./Home/ExploreCollection";
 import BasketSection from "./Home/BasketSection";
 import ProductsSection from "./Home/ProductsSection";
-import CarouselSection from "./Home/CarouselSection";
+import CorporateImage from "./Home/CorporateImage";
 
 const Main = () => {
   return (
     <main>
       <MainBanner />
-      <TopMain />
       <ExploreCollection />
       <BasketSection />
+      <TopMain />
       <ProductsSection />
-      <CarouselSection />
+      <CorporateImage />
     </main>
   );
 };

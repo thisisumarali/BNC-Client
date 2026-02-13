@@ -42,7 +42,7 @@ const ExploreCollection = () => {
       {
         breakpoint: 640, // sm
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
       {
@@ -72,10 +72,10 @@ const ExploreCollection = () => {
                   alt={item.title}
                   src={item.img}
                   fill
-                  className="object-cover rounded-full"
+                  className="object-cover lg:rounded-full"
                 />
 
-                <div className="absolute rounded-full inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
+                <div className="absolute lg:rounded-full inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
 
                 <div className="absolute inset-0 flex items-center justify-center">
                   <h2 className="text-white text-2xl font-semibold tracking-wide opacity-0 -translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">

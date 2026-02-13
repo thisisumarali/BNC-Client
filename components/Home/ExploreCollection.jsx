@@ -14,7 +14,6 @@ const ExploreCollection = () => {
     { title: "Rice Crackers", img: "/images/chickpeas.jpg", link: "/" },
     { title: "Specialities", img: "/images/SpecialAlmonds.jpg", link: "/" },
   ];
-
   const settings = {
     dots: true,
     infinite: true,
@@ -28,28 +27,20 @@ const ExploreCollection = () => {
 
     responsive: [
       {
-        breakpoint: 1280, // lg
-        settings: {
-          slidesToShow: 4,
-        },
+        breakpoint: 1536,
+        settings: { slidesToShow: 4 },
       },
       {
-        breakpoint: 1024, // md
-        settings: {
-          slidesToShow: 3,
-        },
+        breakpoint: 1280,
+        settings: { slidesToShow: 3 },
       },
       {
-        breakpoint: 640, // sm
-        settings: {
-          slidesToShow: 1,
-        },
+        breakpoint: 1024,
+        settings: { slidesToShow: 2 },
       },
       {
-        breakpoint: 0, // mobile
-        settings: {
-          slidesToShow: 1,
-        },
+        breakpoint: 640,
+        settings: { slidesToShow: 1 },
       },
     ],
   };
@@ -66,7 +57,8 @@ const ExploreCollection = () => {
             <div key={index} className="px-1">
               <Link
                 href={item.link}
-                className="group relative block h-[60vh] overflow-hidden"
+              className="group relative block h-[45vh] sm:h-[55vh] lg:h-[60vh] overflow-hidden"
+
               >
                 <Image
                   alt={item.title}

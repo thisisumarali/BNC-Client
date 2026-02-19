@@ -3,11 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button";
+import Section from "../Section";
 
 const CorporateImage = () => {
   return (
-    <section className="w-[75vw] py-16 flex justify-center">
-      <div className=" px-4">
+    <Section className="w-full">
+      <div className="mx-auto w-[75vw] ">
         {/* Main Wrapper */}
         <div className="relative overflow-hidden rounded-xl border border-primary/20 bg-[#fbf7f2] shadow-sm">
           {/* Soft background glow */}
@@ -97,7 +98,7 @@ const CorporateImage = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

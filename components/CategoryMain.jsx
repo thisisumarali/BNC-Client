@@ -45,7 +45,7 @@ const CategoryMain = () => {
     <section>
       <CategoryTabs />
 
-      <div className="py-4 px-4 flex justify-center">
+      <div className="py-4  flex justify-center w-[75vw]">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {data.map((item, i) => (
             <Card key={i} title={item} />

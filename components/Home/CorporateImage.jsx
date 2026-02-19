@@ -6,8 +6,8 @@ import Button from "../Button";
 
 const CorporateImage = () => {
   return (
-    <section className="w-full py-16">
-      <div className="mx-auto max-w-7xl px-4">
+    <section className="w-[75vw] py-16 flex justify-center">
+      <div className=" px-4">
         {/* Main Wrapper */}
         <div className="relative overflow-hidden rounded-xl border border-primary/20 bg-[#fbf7f2] shadow-sm">
           {/* Soft background glow */}

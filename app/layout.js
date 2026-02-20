@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Footer from "@/components/Footer";
 
 const bodoni = Fraunces({
   subsets: ["latin"],
@@ -32,10 +33,13 @@ export default function RootLayout({ children }) {
       <body
         className={` ${poppins.variable} ${bodoni.variable} font-sans antialiased`}
       >
-        <div className="hidden lg:block">
+        <span className="hidden lg:block">
           <Header />
-        </div>
+        </span>
         {children}
+        <span>
+          <Footer />
+        </span>
       </body>
     </html>
   );

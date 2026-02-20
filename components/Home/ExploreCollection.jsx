@@ -59,10 +59,10 @@ const ExploreCollection = () => {
       <div className="px-2 py-6">
         <Slider {...settings}>
           {items.map((item, index) => (
-            <div key={index} className="px-2">
+            <div key={index} className="px-2 py-2">
               <Link
                 href={item.link}
-                className="group relative block h-[45vh] sm:h-[55vh] lg:h-[60vh] overflow-hidden"
+                className="group relative block h-[45vh] sm:h-[55vh] lg:h-[60vh] overflow-hidden  rounded-full"
               >
                 <Image
                   alt={item.title}

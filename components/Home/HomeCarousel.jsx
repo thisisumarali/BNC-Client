@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
-import Link from "next/link";
+import Section from "../Section";
 
 const HomeCarousel = () => {
   const [mounted, setMounted] = useState(false);
@@ -36,13 +36,13 @@ const HomeCarousel = () => {
   };
 
   return (
-    <section className="px-24 py-6">
-      <div className="rounded-3xl overflow-hidden">
+    <Section className="w-full  ">
+      <div className="overflow-hidden mx-auto w-[75vw]">
         <Slider {...settings}>
           {items.map((item, index) => (
             <div key={index}>
               {/* FLEX PARENT */}
-              <div className="relative  h-screen flex items-end">
+              <div className="relative  h-[80vh] flex items-end">
                 {/* Background Image */}
                 <Image
                   src={item.img}
@@ -90,7 +90,7 @@ const HomeCarousel = () => {
           ))}
         </Slider>
       </div>
-    </section>
+    </Section>
   );
 };
 

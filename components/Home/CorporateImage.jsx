@@ -10,7 +10,7 @@ const CorporateImage = () => {
     <Section className="w-full">
       <div className="mx-auto w-[75vw] ">
         {/* Main Wrapper */}
-        <div className="relative overflow-hidden rounded-xl border border-primary/20 bg-[#fbf7f2] shadow-sm">
+        <div className="relative overflow-hidden border border-primary/20 bg-[#fbf7f2] shadow-sm">
           {/* Soft background glow */}
           <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-transparent" />
 

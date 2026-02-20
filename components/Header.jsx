@@ -29,14 +29,20 @@ const Header = () => {
           <FaMagnifyingGlass />
         </span>
         <Link href="/">
-          <Image src="/images/logo-red.png" width={80} height={80} alt="Logo" />
+          <Image
+            src="/images/logo-red.png"
+            width={105}
+            height={105}
+            alt="Logo"
+          />
         </Link>
+
         <span className="text-xl text-primary flex gap-3">
           <FaShoppingCart />
           <FaUser />
         </span>
       </div>
-      <nav className="flex justify-center gap-8 mt-6 text-[16px] uppercase font-bold font-mono pb-6">
+      <nav className="flex justify-center gap-8  text-[16px] uppercase font-bold font-mono py-2">
         {navLinks.map((link, index) => (
           <Link key={index} href={link.href} className={linkStyle}>
             {link.name}

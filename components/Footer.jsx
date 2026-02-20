@@ -11,11 +11,11 @@ import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 
 export default function Footer() {
   const socialIcons = [
-    { icon: <FaFacebookF />, href: "#" },
-    { icon: <FaInstagram />, href: "#" },
-    { icon: <FaTwitter />, href: "#" },
-    { icon: <FaGithub />, href: "#" },
-    { icon: <FaDribbble />, href: "#" },
+    { icon: <FaFacebookF />, href: "/" },
+    { icon: <FaInstagram />, href: "/" },
+    { icon: <FaTwitter />, href: "/" },
+    { icon: <FaGithub />, href: "/" },
+    { icon: <FaDribbble />, href: "/" },
   ];
 
   const footerSections = [
@@ -80,7 +80,7 @@ export default function Footer() {
                   {section.links.map((link, index) => (
                     <li key={index}>
                       <Link
-                        href="#"
+                        href="/"
                         className="text-gray-300 hover:text-white transition"
                       >
                         {link}
@@ -124,11 +124,10 @@ export default function Footer() {
           <div className="text-center sm:flex sm:justify-between sm:text-left">
             <p className="text-sm text-gray-200">
               All rights reserved{" "}
-              <Link href="#" className="underline hover:text-white transition">
-                Terms & Conditions
-              </Link>{" "}
-              ·{" "}
-              <Link href="#" className="underline hover:text-white transition">
+              <Link href="/" className="underline hover:text-white transition">
+                Terms & Conditions{" "}
+              </Link>
+              <Link href="/" className="underline hover:text-white transition">
                 Privacy Policy
               </Link>
             </p>

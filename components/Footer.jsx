@@ -36,9 +36,21 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-primary">
-      <div className="mx-auto max-w-7xl px-4 pt-16 pb-6 sm:px-6 lg:px-8 lg:pt-24">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+    <footer className="relative text-white">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/images/mix-fruits.jpg')",
+        }}
+      />
+
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/85" />
+
+      {/* Content */}
+      <div className="relative mx-auto max-w-7xl px-4 pt-16 pb-6 sm:px-6 lg:px-8 lg:pt-24">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
           {/* Logo + Description */}
           <div>
             <div className="flex justify-center sm:justify-start">
@@ -50,17 +62,17 @@ export default function Footer() {
               />
             </div>
 
-            <p className="mt-6 max-w-md text-center leading-relaxed text-gray-200 sm:max-w-xs sm:text-left">
+            <p className="mt-6 max-w-md text-center leading-relaxed text-gray-300 sm:text-left">
               Premium sweets crafted with tradition since 1976. Taste the
               richness in every bite.
             </p>
 
-            <ul className="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
+            <ul className="mt-8 flex justify-center gap-6 sm:justify-start">
               {socialIcons.map((item, i) => (
                 <li key={i}>
                   <Link
                     href={item.href}
-                    className="text-slate-300 hover:text-white transition text-xl"
+                    className="text-gray-300 hover:text-white transition text-xl"
                   >
                     {item.icon}
                   </Link>
@@ -70,13 +82,13 @@ export default function Footer() {
           </div>
 
           {/* Links Section */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:col-span-2">
             {footerSections.map((section, i) => (
               <div key={i} className="text-center sm:text-left">
-                <p className="text-lg font-medium text-gray-100">
+                <p className="text-lg font-semibold text-white">
                   {section.title}
                 </p>
-                <ul className="mt-8 space-y-1 text-sm">
+                <ul className="mt-6 space-y-2 text-sm">
                   {section.links.map((link, index) => (
                     <li key={index}>
                       <Link
@@ -93,23 +105,23 @@ export default function Footer() {
 
             {/* Contact */}
             <div className="text-center sm:text-left">
-              <p className="text-lg font-medium text-gray-100">Contact Us</p>
-              <ul className="mt-8 space-y-4 text-sm">
-                <li className="flex items-center justify-center gap-2 sm:justify-start">
-                  <MdEmail className="text-lg text-gray-100" />
+              <p className="text-lg font-semibold text-white">Contact Us</p>
+              <ul className="mt-6 space-y-4 text-sm">
+                <li className="flex items-center justify-center gap-3 sm:justify-start">
+                  <MdEmail className="text-lg text-white" />
                   <span className="text-gray-300">
                     contact@bombaychocnuts.com
                   </span>
                 </li>
 
-                <li className="flex items-center justify-center gap-2 sm:justify-start">
-                  <MdPhone className="text-lg  text-gray-100" />
+                <li className="flex items-center justify-center gap-3 sm:justify-start">
+                  <MdPhone className="text-lg text-white" />
                   <span className="text-gray-300">0330-0266229</span>
                 </li>
 
-                <li className="flex items-start justify-center gap-2 sm:justify-start">
-                  <MdLocationOn className="text-lg text-gray-100 mt-1" />
-                  <address className="text-gray-300 not-italic">
+                <li className="flex items-start justify-center gap-3 sm:justify-start">
+                  <MdLocationOn className="text-lg text-white mt-1" />
+                  <address className="text-gray-300 not-italic leading-relaxed">
                     Showroom # 2, 34 F, Muhammad Ali Co-operative Housing
                     Society, Karachi
                   </address>
@@ -120,19 +132,26 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 border-t border-gray-500 pt-6">
+        <div className="mt-12 border-t border-white/20 pt-6">
           <div className="text-center sm:flex sm:justify-between sm:text-left">
-            <p className="text-sm text-gray-200">
-              All rights reserved{" "}
-              <Link href="/" className="underline hover:text-white transition">
-                Terms & Conditions{" "}
-              </Link>
-              <Link href="/" className="underline hover:text-white transition">
+            <p className="text-sm text-gray-300">
+              All rights reserved.{" "}
+              <Link
+                href="/"
+                className="underline hover:text-white transition ml-1"
+              >
+                Terms & Conditions
+              </Link>{" "}
+              |{" "}
+              <Link
+                href="/"
+                className="underline hover:text-white transition ml-1"
+              >
                 Privacy Policy
               </Link>
             </p>
 
-            <p className="mt-4 text-sm text-gray-200 sm:mt-0">
+            <p className="mt-4 text-sm text-gray-300 sm:mt-0">
               © {new Date().getFullYear()} Bombay Choc n Nuts
             </p>
           </div>

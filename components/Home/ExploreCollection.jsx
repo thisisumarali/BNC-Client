@@ -85,7 +85,7 @@ const ExploreCollection = () => {
       </div>
 
       <div className="flex justify-center pt-6 py-8">
-        <button className="outline-2 outline-black text-white hover:bg-primary cursor-pointer bg-primary/90 px-6 py-3">
+        <button className="outline-2 outline-black text-black hover:bg-primary hover:uppercase hover:text-white cursor-pointer bg-transparent px-6 py-3">
           All Categories
         </button>
       </div>

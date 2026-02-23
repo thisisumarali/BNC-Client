@@ -38,7 +38,7 @@ const ExploreCollection = () => {
       img: "/images/rice_cracker.jpg",
       link: "/",
     },
-    { title: "Special", img: "/images/SpecialAlmonds.jpg", link: "/" },
+    { title: "Chickpease", img: "/images/chickpeas.jpg", link: "/" },
   ];
 
   const settings = {
@@ -55,7 +55,7 @@ const ExploreCollection = () => {
   };
 
   return (
-    <section className="px-2 py-6 overflow-hidden">
+    <section className="px-2 pt-6 overflow-hidden ">
       <h1 className="text-primary py-6 text-3xl sm:text-4xl lg:text-5xl font-mono text-center uppercase">
         Explore Collection
       </h1>
@@ -95,7 +95,7 @@ const ExploreCollection = () => {
         </Slider>
       </div>
 
-      <div className="flex justify-center pt-6 py-8">
+      <div className="flex justify-center py-6">
         <button className="outline-2 outline-black text-black hover:bg-primary hover:uppercase hover:text-white cursor-pointer bg-transparent px-6 py-3">
           All Categories
         </button>

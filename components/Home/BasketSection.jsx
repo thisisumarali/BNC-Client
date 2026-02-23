@@ -5,8 +5,7 @@ import Section from "../Section";
 
 const BasketSection = () => {
   return (
-    <Section>
-      {" "}
+    <section className=" pb-6">
       <div className="w-full min-h-[90vh] bg-white ">
         <H1 className="text-center  text-primary">
           Chocolates & Nuts, Perfectly Gifted
@@ -114,7 +113,7 @@ const BasketSection = () => {
           </div>
         </div>
       </div>
-    </Section>
+    </section>
   );
 };
 

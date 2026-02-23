@@ -37,12 +37,12 @@ const HomeCarousel = () => {
 
   return (
     <Section className="w-full  ">
-      <div className="overflow-hidden mx-auto w-[75vw]">
+      <div className="overflow-hidden mx-auto w-[75vw] rounded-lg">
         <Slider {...settings}>
           {items.map((item, index) => (
             <div key={index}>
               {/* FLEX PARENT */}
-              <div className="relative  h-[80vh] flex items-end">
+              <div className="relative  h-[90vh] flex items-end">
                 {/* Background Image */}
                 <Image
                   src={item.img}

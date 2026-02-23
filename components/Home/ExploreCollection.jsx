@@ -35,7 +35,7 @@ const ExploreCollection = () => {
     { title: "Specialities", img: "/images/SpecialAlmonds.jpg", link: "/" },
     {
       title: "Rice Crackers",
-      img: "/images/chickpeas.jpg",
+      img: "/images/rice_cracker.jpg",
       link: "/",
     },
     { title: "Special", img: "/images/SpecialAlmonds.jpg", link: "/" },

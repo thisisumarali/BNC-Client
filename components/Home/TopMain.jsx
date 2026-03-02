@@ -10,10 +10,10 @@ const TopMain = () => {
         Quality Products <br /> Trusted by Thousands.
       </H1>
 
-      <div className="flex flex-col lg:flex-row justify-center py-6 items-center  px-4 lg:px-0">
+      <div className="flex flex-col lg:flex-row justify-center  items-center  px-4 lg:px-0">
         {/* Text Box */}
-        <div className="relative w-full lg:w-[37.5%] h-auto lg:h-[45vh] bg-primary/10 text-center p-6 lg:px-16">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl uppercase pb-2">
+        <div className="relative w-full lg:w-[37.5%] h-auto lg:h-[45vh] bg-primary/10 text-center py-6 lg:px-16">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl uppercase ">
             A Taste Of Real Goodness
           </h1>
 

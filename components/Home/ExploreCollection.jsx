@@ -29,7 +29,7 @@ const ExploreCollection = () => {
   if (!mounted) return null;
 
   const items = [
-    { title: "Dry Fruits", img: "/images/Figs.jpg", link: "/dry-fruits" },
+    { title: "Dry Fruits", img: "/images/almonds-1.jpg", link: "/dry-fruits" },
     { title: "Dried Fruits", img: "/images/cranberry.jpg", link: "/" },
     { title: "Dates", img: "/images/Ajwa.jpg", link: "/" },
     { title: "Specialities", img: "/images/SpecialAlmonds.jpg", link: "/" },

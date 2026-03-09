@@ -66,16 +66,16 @@ const ExploreCollection = () => {
             <div key={index} className="px-2 py-4">
               <Link
                 href={item.link}
-                className="group relative block h-[45vh] sm:h-[55vh] lg:h-[60vh] overflow-hidden  rounded-full"
+                className="group relative block h-[45vh] sm:h-[55vh] lg:h-[60vh] overflow-hidden"
               >
                 <Image
                   alt={item.title}
                   src={item.img}
                   fill
-                  className="object-cover lg:rounded-full"
+                  className="object-cover "
                 />
 
-                <div className="absolute lg:rounded-full inset-0 bg-primary/90 opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
+                <div className="absolute  inset-0 bg-primary/90 opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
 
                 <div className="absolute inset-0 flex items-center justify-center">
                   <h2

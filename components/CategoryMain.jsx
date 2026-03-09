@@ -39,8 +39,8 @@ const CategoryMain = () => {
     <section>
       <CategoryTabs />
 
-      <div className="py-4 flex justify-center w-[75vw] px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 ">
+      <div className="flex justify-center w-[75vw] p-4 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6  lg:gap-8 ">
           {data.map((item, i) => (
             <Card key={i} title={item.title} image={item.image} />
           ))}

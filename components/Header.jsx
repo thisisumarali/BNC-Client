@@ -25,9 +25,12 @@ const Header = () => {
     <header>
       <Topheader />
       <div className="flex items-center justify-around py-2">
-        <span className="text-xl text-primary">
-          <FaMagnifyingGlass />
-        </span>
+        <div className="flex gap-4">
+          <span>Home</span>
+          <span>About </span>
+          <span>Corporate</span>
+          <span>Brands</span>
+        </div>
         <Link href="/">
           <Image
             src="/images/logo-red.png"
@@ -37,9 +40,15 @@ const Header = () => {
           />
         </Link>
 
-        <span className="text-xl text-primary flex gap-3">
-          <FaShoppingCart />
-          <FaUser />
+        <span className=" flex gap-3">
+          <span>Loyalty Card </span>
+          <span>Contact Us </span>
+          <span>Corporate</span>
+          <span className="text-xl flex gap-3 text-primary">
+            <FaShoppingCart />
+            <FaUser />
+            <FaMagnifyingGlass />
+          </span>
         </span>
       </div>
       <nav className="flex justify-center gap-8  text-[16px] uppercase font-bold font-mono py-2">
